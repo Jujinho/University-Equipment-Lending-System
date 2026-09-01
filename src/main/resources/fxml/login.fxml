@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.controller.LoginController"
+            prefHeight="600.0" prefWidth="800.0"
+            style="-fx-background-color: #f5f5f5;">
+
+
+   <top>
+      <Label text="University Equipment Lending System"
+             alignment="CENTER" BorderPane.alignment="CENTER"
+             style="-fx-font-size: 26px; -fx-font-family: 'Segoe UI Semibold'; -fx-text-fill: #333;">
+         <BorderPane.margin>
+            <Insets top="40.0" bottom="20.0"/>
+         </BorderPane.margin>
+      </Label>
+   </top>
+
+
+   <center>
+      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER"
+            style="-fx-background-color: white; -fx-padding: 40px; -fx-background-radius: 12px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.5, 0, 2);">
+         <children>
+
+            <Label text="Login"
+                   style="-fx-font-size: 22px; -fx-font-family: 'Segoe UI'; -fx-text-fill: #222;" />
+
+            <!-- Username -->
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Username:"
+                         style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI'; -fx-text-fill: #333;"
+                         prefWidth="80.0"/>
+                  <TextField fx:id="usernameField" promptText="Enter your username"
+                             style="-fx-background-radius: 6px; -fx-border-color: #ccc; -fx-padding: 6px;"
+                             prefWidth="250.0"/>
+               </children>
+            </HBox>
+
+            <!-- Password -->
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="Password:"
+                         style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI'; -fx-text-fill: #333;"
+                         prefWidth="80.0"/>
+                  <PasswordField fx:id="passwordField" promptText="Enter your password"
+                                 style="-fx-background-radius: 6px; -fx-border-color: #ccc; -fx-padding: 6px;"
+                                 prefWidth="250.0"/>
+               </children>
+            </HBox>
+
+            <!-- Error -->
+            <Label fx:id="errorLabel" textFill="#d32f2f"
+                   style="-fx-font-size: 13px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;" />
+
+            <!-- Login Button -->
+            <Button fx:id="loginButton" text="Login" onAction="#handleLogin"
+                    style="-fx-background-color: #0066cc; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 6px; -fx-cursor: hand;"
+                    prefWidth="200.0" prefHeight="40.0"/>
+
+            <Label text="or"
+                   style="-fx-text-fill: #666; -fx-font-size: 12px;" />
+
+            <!-- Visitor Button -->
+            <Button fx:id="visitorButton" text="Continue as Visitor" onAction="#handleVisitorAccess"
+                    style="-fx-background-color: #eeeeee; -fx-text-fill: #333; -fx-font-size: 14px; -fx-background-radius: 6px; -fx-cursor: hand;"
+                    prefWidth="200.0" prefHeight="40.0"/>
+
+         </children>
+         <padding>
+            <Insets top="20.0" bottom="20.0" left="50.0" right="50.0"/>
+         </padding>
+      </VBox>
+   </center>
+
+
+   <bottom>
+      <Label text="© 2025 Group 9 - University Equipment Lending System"
+             alignment="CENTER" BorderPane.alignment="CENTER"
+             style="-fx-font-size: 12px; -fx-text-fill: #999;">
+         <BorderPane.margin>
+            <Insets bottom="20.0"/>
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+
+</BorderPane>
